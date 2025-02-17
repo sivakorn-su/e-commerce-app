@@ -5,15 +5,11 @@ A modern NestJS application for managing products and orders with CSV export cap
 ## ✨ Features
 
 1. 📦 **Create Product**
-
    - Add new products to the system with detailed information
    - Manage product inventory and details
-
 2. 📊 **Export Products**
-
    - Export complete product catalog to CSV format
    - Generate reports for inventory management
-
 3. 🛒 **Create Order**
    - Create new customer orders
    - Add multiple products to a single order
@@ -88,8 +84,30 @@ EXIT;
 
 Note: With `DB_SYNCHRONIZE=true`, TypeORM will automatically create and update database tables based on your entities. While this is convenient for development, consider setting it to `false` in production and using migrations instead.
 
+### 4. Seed the Database 🌱
+
+To populate the database with initial data, run the seeding command:
+
+```bash
+npm run seed
+```
+
+This will:
+
+- 📦 Create sample products
+
 The application will automatically:
 
-- Connect to MySQL on port 3307
-- Use root user with no password
-- Create/update tables in the `e-commerce` database
+- 🔌 Connect to MySQL on port 3307
+- 🔑 Use root user with no password
+- 📝 Create/update tables in the `e-commerce` database
+
+### 5. Run the Application 🚀
+
+Start the application in development mode:
+
+```bash
+npm run start:dev
+```
+
+The server will start on `http://localhost:3000`.
